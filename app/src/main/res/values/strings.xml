@@ -1,0 +1,14 @@
+<resources>
+  <string name="app_name">Ajit\'s Assignment</string>
+  <string name="action_settings">Settings</string>
+  <string name="action_share">Share</string>
+
+  <string name="scan_title">Please start file scan to get the following statics:</string>
+  <string name="scan_point_1">Frequent file extension with frequencies</string>
+  <string name="scan_point_2">Average file size</string>
+  <string name="scan_point_3">Biggest 10 files with name, extension, size</string>
+
+  <string name="avg_file_size">Average file size is</string>
+
+  <string name="author_detail">Ajit (+91-9911611735 jangraajit@gmail.com)</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_margin="5dp"
+  android:background="@drawable/shape_rect_solid_gray">
+
+  <TextView
+    android:id="@+id/tv_frequency"
+    android:layout_width="20dp"
+    android:layout_height="20dp"
+    android:layout_marginRight="5dp"
+    android:background="@drawable/shape_circle_boundary_gray"
+    android:gravity="center"
+    android:textAllCaps="true"
+    android:textColor="@android:color/black"
+    android:textSize="10sp"/>
+
+  <TextView
+    android:id="@+id/tv_extension"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/tv_frequency"
+    android:textAllCaps="true"
+    android:textColor="@android:color/white"
+    android:textSize="15sp"/>
+
+</RelativeLayout>

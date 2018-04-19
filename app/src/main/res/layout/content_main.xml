@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_marginTop="?android:attr/actionBarSize">
+
+  <RelativeLayout
+    android:id="@+id/rl_scanning"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <TextView
+      android:id="@+id/tv_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10dp"
+      android:layout_marginLeft="20dp"
+      android:layout_marginTop="20dp"
+      android:text="@string/scan_title"
+      android:textColor="@android:color/black"/>
+
+    <RelativeLayout
+      android:id="@+id/rl_scan_point_1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tv_title"
+      android:layout_marginBottom="10dp"
+      android:layout_marginLeft="20dp">
+
+      <TextView
+        android:id="@+id/tv_scan_point_1_num"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_circle_solid"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@android:color/white"/>
+
+      <TextView
+        android:id="@+id/tv_scan_point_1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/tv_scan_point_1_num"
+        android:text="@string/scan_point_1"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:id="@+id/rl_scan_point_2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/rl_scan_point_1"
+      android:layout_marginBottom="10dp"
+      android:layout_marginLeft="20dp">
+
+      <TextView
+        android:id="@+id/tv_scan_point_2_num"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_circle_solid"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="@android:color/white"/>
+
+      <TextView
+        android:id="@+id/tv_scan_point_2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/tv_scan_point_2_num"
+        android:text="@string/scan_point_2"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:id="@+id/rl_scan_point_3"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/rl_scan_point_2"
+      android:layout_marginBottom="10dp"
+      android:layout_marginLeft="20dp">
+
+      <TextView
+        android:id="@+id/tv_scan_point_3_num"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_circle_solid"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="@android:color/white"/>
+
+      <TextView
+        android:id="@+id/tv_scan_point_3_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/tv_scan_point_3_num"
+        android:text="@string/scan_point_3"/>
+
+    </RelativeLayout>
+
+    <com.asj.gspannassignment.utils.SearchRippleAnimation
+      android:id="@+id/search_ripple_animation"
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_centerInParent="true"
+      android:visibility="gone"
+      app:rb_color="@color/orange_dark"
+      app:rb_duration="3000"
+      app:rb_radius="20dp"
+      app:rb_rippleAmount="4"
+      app:rb_scale="6"/>
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:background="@android:color/darker_gray"
+      android:gravity="center_horizontal"
+      android:padding="10dp"
+      android:text="@string/author_detail"
+      android:textColor="@android:color/white"
+      android:textSize="15sp"/>
+
+  </RelativeLayout>
+
+  <RelativeLayout
+    android:id="@+id/rl_scanned"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <android.support.v7.widget.RecyclerView
+      android:id="@+id/rv_frequent_file"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="5dp"/>
+
+    <TextView
+      android:id="@+id/tv_avg_file_size"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/rv_frequent_file"
+      android:layout_marginBottom="10dp"
+      android:layout_marginTop="10dp"
+      android:background="@color/colorPrimary"
+      android:paddingBottom="10dp"
+      android:paddingLeft="10dp"
+      android:paddingRight="10dp"
+      android:paddingTop="10dp"
+      android:text="Average file size is 00 MB"
+      android:textColor="@android:color/white"/>
+
+    <android.support.v7.widget.RecyclerView
+      android:id="@+id/rv_biggest_file"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/tv_avg_file_size"
+      android:padding="5dp"/>
+
+  </RelativeLayout>
+
+</FrameLayout>
