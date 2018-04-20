@@ -86,6 +86,6 @@ public class ScanPresenter<V extends ScanMvpView> extends BasePresenter<V> imple
 
   @Override
   public long getAvgFileSize(final int totalSize, final ArrayList<BiggestFileModel> alBiggestFileModel) {
-    return totalSize / alBiggestFileModel.size();
+    return (alBiggestFileModel.size() == 0 ? 0 : (totalSize / alBiggestFileModel.size()));
   }
 }
